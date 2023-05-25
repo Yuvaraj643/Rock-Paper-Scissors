@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+  background-image: url(./Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  font-family: Roboto Slab;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+.choice{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+button{
+    border-radius: 50%;
+    border: 10px solid #025464;
+}
+
+button:hover{
+    transition: 1s ease-in-out;
+    scale: 1.2;
+}
+button img{
+    width:100px;
+}
+
+.game-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+
+.player-choice, .computer-choice{
+    color: aliceblue;
+    background-color: #025464;
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10%;
+    border: 3px solid #aee8f4;
+}
+
+
+
+
+.result{
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.player-score, .computer-score{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+}
