@@ -75,7 +75,7 @@ const Game = () => {
               value={playerName}
               onChange={(e) => setPlayerName(e.target.value)}
             />
-            <button onClick={closePopup}>OK</button>
+            <button className="submit" onClick={closePopup}>Submit</button>
           </div>
         </div>
       )}
@@ -127,7 +127,7 @@ const Game = () => {
                   </div>
                 </div>
               )}
-              <p className="result">Result: {result}</p>
+              <p className="result">{result}</p>
               
             </div>
 
