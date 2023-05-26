@@ -4,6 +4,7 @@ import Rock from "./rock.png";
 import Paper from "./paper.png";
 import Scissor from "./scissors.png";
 import "animate.css";
+import Spline from '@splinetool/react-spline';
 const Game = () => {
   const choices = ["rock", "paper", "scissor"];
   const [playerChoice, setPlayerChoice] = useState(null);
@@ -36,7 +37,7 @@ const Game = () => {
     } else if (player === "rock" && computer === "paper") {
       result = "You Lose ... 'Paper beats Rock'";
     } else if (player === "rock" && computer === "scissor") {
-      result = "You Win!!! Rock breaks the scissor";
+      result = "You win!!! Rock breaks the scissor";
     } else if (player === "paper" && computer === "rock") {
       result = "Hurray you win!! Paper covers the rock";
     } else if (player === "paper" && computer === "scissor") {
@@ -52,7 +53,7 @@ const Game = () => {
   };
 
   const updateScores = (result) => {
-    if (result.includes("Win")) {
+    if (result.includes("win")) {
       setPlayerScore((prevScore) => prevScore + 1);
     } else if (result.includes("Lose")) {
       setComputerScore((prevScore) => prevScore + 1);
@@ -82,6 +83,7 @@ const Game = () => {
       {!showPopup && (
         <div>
           <h1>Rock Paper Scissors Game</h1>
+          <p className="result">{result}</p>
           <div>
             <div className="container">
               {playerChoice && computerChoice && (
@@ -113,27 +115,29 @@ const Game = () => {
                     </div>
                   </div>
                   <div className="computer-score">
-                  <p>Computer Score: {computerScore}</p>
-                  <div className="computer-choice">
-                    <p>Computer's Choice: {computerChoice}</p>
-                    {computerChoice === "rock" ? (
-                      <img src={Rock} alt="Rock" />
-                    ) : computerChoice === "paper" ? (
-                      <img src={Paper} alt="Paper" />
-                    ) : (
-                      <img src={Scissor} alt="Scissor" />
-                    )}
-                  </div>
+                    <p>Computer Score: {computerScore}</p>
+                    <div className="computer-choice">
+                      <p>Computer's Choice: {computerChoice}</p>
+                      {computerChoice === "rock" ? (
+                        <img src={Rock} alt="Rock" />
+                      ) : computerChoice === "paper" ? (
+                        <img src={Paper} alt="Paper" />
+                      ) : (
+                        <img src={Scissor} alt="Scissor" />
+                      )}
+                    </div>
                   </div>
                 </div>
               )}
-              <p className="result">{result}</p>
-              
-            </div>
 
-            <div>
+
+            </div>
+            <div className="viewer">
+              <spline-viewer url="https://prod.spline.design/FVZWbQH2B6ndj9UU/scene.splinecode" events-target="global"></spline-viewer>
+            </div>
+            <div className="select-choice">
               <h1 style={{ paddingLeft: "50px" }}>Select your Choice</h1>
-              
+
               <div className="choice">
                 {choices.map((choice) => (
                   <button key={choice} onClick={() => playRound(choice)}>
