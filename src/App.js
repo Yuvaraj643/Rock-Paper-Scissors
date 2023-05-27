@@ -2,7 +2,6 @@ import React from "react";
 import Home from "./Components/Homepage/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Game from "./Components/Game/Game";
-import Spline from '@splinetool/react-spline';
 
 const App = () => {
   return (
