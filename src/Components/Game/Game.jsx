@@ -4,7 +4,8 @@ import Rock from "./rock.png";
 import Paper from "./paper.png";
 import Scissor from "./scissors.png";
 import "animate.css";
-import Spline from "@splinetool/react-spline";
+
+
 const Game = () => {
   const choices = ["rock", "paper", "scissor"];
   const [playerChoice, setPlayerChoice] = useState(null);
