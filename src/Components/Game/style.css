@@ -24,23 +24,26 @@ h1{
 button{
     border-radius: 50%;
     border: 10px solid #025464;
-    box-shadow: rgb(139, 132, 132) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 button:hover{
     transition: 1s ease-in-out;
-    scale: 1.1;
+    scale: 1.2;
 }
 button img{
     width:100px;
 }
 
 .game-container{
-    margin: 0 auto;
+    width: 80%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin: 5px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.obj{
+    padding-top: 50px;
 }
 
 .player-choice, .computer-choice{
@@ -67,7 +70,6 @@ button img{
     color: white;
     text-align: center;
     font-size: 22px;
-    max-height: 100px;
 }
 
 .popup{
@@ -112,8 +114,3 @@ button img{
     transform: translateY(10px);
     transition: 100ms;
    }
-
-   .viewer{
-    margin-top: 150px;
-   } 
-
